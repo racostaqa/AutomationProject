@@ -11,7 +11,7 @@ class GoogleAccountsPage(object):
 
         # search page locators
         self.email = driver.find_element(By.CSS_SELECTOR, Locators.google_account_email)
-        self.password = driver.find_element(By.XPATH, Locators.google_account_password)
+        # self.password = driver.find_element(By.XPATH, Locators.google_account_password)
         self.next_button = driver.find_element(By.XPATH, Locators.google_next_btn)
         self.access_text = driver.find_element(By.XPATH, Locators.google_access_text)
         # self.show_password_btn = driver.find_element(By.XPATH, Locators.google_account_show_password_btn)

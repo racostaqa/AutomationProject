@@ -43,7 +43,7 @@ class CheckGoogleDriveUploadTest(EnvironmentSetUp):
 
         # waiting for element Password to be present
         password_web_element = WebDriverWait(driver, 20).until(
-            ec.presence_of_element_located((By.XPATH, Locators.google_account_password)))
+            ec.element_to_be_clickable((By.XPATH, Locators.google_account_password)))
         google_accounts_page.assign_password_object(password_web_element)
 
         # waiting for Next Button element to be present
