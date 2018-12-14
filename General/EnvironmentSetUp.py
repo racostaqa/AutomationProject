@@ -8,19 +8,21 @@ from selenium import webdriver
 class EnvironmentSetUp(unittest.TestCase):
 
     # setUp contains the browser setup attributes
-    def setUp(self):
-        self.driver = webdriver.Chrome("C:\\Automation\\Drivers\\chromedriver.exe")
+    @classmethod
+    def setUpClass(cls):
+        cls.driver = webdriver.Chrome("C:\\Automation\\Drivers\\chromedriver.exe")
+        print("----------------------------------------------------------\n")
         print("run Started at: "+str(datetime.datetime.now()))
         print("Chrome Environment Set Up")
-        print("----------------------------------------------------------")
-        self.driver.maximize_window()
-        self.driver.implicitly_wait(30)
+        cls.driver.maximize_window()
+        cls.driver.implicitly_wait(30)
 
     # tearDown method just to close all the browser instances and then quit
-    def tearDown(self):
-        if self.driver is not None:
-            print("----------------------------------------------------------")
-            print("Test Environment Destroyed")
+    @classmethod
+    def tearDownClass(cls):
+        if cls.driver is not None:
             print("Run Completed at: " + str(datetime.datetime.now()))
-            self.driver.close()
-            self.driver.quit()
+            print("Test Environment Destroyed")
+            print("----------------------------------------------------------\n")
+            cls.driver.close()
+            cls.driver.quit()

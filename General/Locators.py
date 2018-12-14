@@ -35,7 +35,7 @@ class Locators(object):
     google_access_text = "//h1[contains(string(), 'Acceder')]"
     google_account_email = "#identifierId"
     google_next_btn = "//span[contains(string(), 'Siguiente')]"
-    google_account_password = "//input[@type='text']"
+    google_account_password = "//input[@type='password']"
     google_account_show_password_btn = "//span[@class='nK6IJ iStiSd']"
     # google_account_password = "input[type='password']"
 

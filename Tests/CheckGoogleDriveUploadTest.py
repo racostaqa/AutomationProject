@@ -60,13 +60,13 @@ class CheckGoogleDriveUploadTest(EnvironmentSetUp):
         self.assertTrue(google_accounts_page.get_password().is_displayed())
         print("Google Accounts Password page is displayed")
 
-        # clicking on Show Password button
-        google_accounts_page.click_show_password_button()
-        sleep(3)
-
-        # clicking on password field
-        google_accounts_page.click_password()
-        sleep(3)
+        # # clicking on Show Password button
+        # google_accounts_page.click_show_password_button()
+        # sleep(3)
+        #
+        # # clicking on password field
+        # google_accounts_page.click_password()
+        # sleep(3)
 
         # filling password field
         google_accounts_page.set_password(Data.GOOGLE_ACCOUNT_PASSWORD)
